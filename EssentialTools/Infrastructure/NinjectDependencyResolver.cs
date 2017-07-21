@@ -7,7 +7,7 @@ using System.Web.Mvc;
 namespace EssentialTools.Infrastructure
 {
     public class NinjectDependencyResolver : IDependencyResolver
-    {
+   {
         private IKernel kernel;
 
         public NinjectDependencyResolver(IKernel kernelParam)
@@ -29,7 +29,6 @@ namespace EssentialTools.Infrastructure
         private void AddBindings()
         {
             kernel.Bind<IValueCalculator>().To<LinqValueCalculator>();
-            kernel.Bind<IDiscountHelper>().To<DefaultDiscountHelper>();
         }
-    }
+   }
 }
